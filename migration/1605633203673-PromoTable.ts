@@ -16,7 +16,7 @@ export class PromoTable1605633203673 implements MigrationInterface {
 
     public async down(queryRunner: QueryRunner): Promise<any> {
         await queryRunner.query(
-            `DROP TABLE "promotions"`,
+            `DELETE FROM promotions;`,
             undefined
         )
     }

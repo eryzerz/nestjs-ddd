@@ -17,7 +17,7 @@ export class ProductTable1605614804046 implements MigrationInterface {
 
     public async down(queryRunner: QueryRunner): Promise<any> {
         await queryRunner.query(
-            `DROP TABLE "product"`,
+            `DELETE FROM product;`,
             undefined
         )
     }
