@@ -21,9 +21,6 @@ $ docker-compose up -d
 ```bash
 # watch mode
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
 ## Populate data
