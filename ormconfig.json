@@ -12,7 +12,5 @@
     "entities": [
         "dist/**/*.entity.js"
     ],
-    "seeds": ["dist/seeds/**/*{.js}"],
-    "factories": ["dist/factories/**/*{.js}"],
     "synchronize": false
 }

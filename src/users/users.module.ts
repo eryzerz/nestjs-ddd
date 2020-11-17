@@ -7,7 +7,6 @@ import { CreateUserApplication } from './applications/create.user.application';
 import { USER_TYPES } from './interfaces/types';
 import { GetUserApplication } from './applications/get.user.application';
 import { GetUserService } from './services/get.user.service';
-import { UserResolver } from './resolver/user.resolver';
 import { GetAllUserService } from './services/get.all.user.service';
 import { GetAllUserApplication } from './applications/get.all.user.application';
 import { EditUserService } from './services/edit.user.service';
@@ -40,9 +39,7 @@ const deleteUserService = { provide: USER_TYPES.services.IDeleteUserService, use
         getUserService, 
         getAllUserService, 
         editUserService, 
-        deleteUserService, 
-        UserResolver
+        deleteUserService
     ],
-    exports: [UserResolver],
 })
 export class UsersModule {}
