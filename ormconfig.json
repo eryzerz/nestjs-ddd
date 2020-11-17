@@ -12,5 +12,5 @@
     "entities": [
         "dist/**/*.entity.js"
     ],
-    "synchronize": false
+    "synchronize": true
 }
