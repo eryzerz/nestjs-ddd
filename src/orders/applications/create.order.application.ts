@@ -37,9 +37,17 @@ export class CreateOrderApplication implements ICreateOrderApplication {
             if (promoDetail.productId === detail.productId) {
                 promo = await this.promoService.findOne(promoDetail.promoId) 
 
-                total = detail.qty * ((1 - parseFloat(promo.discount)) * product.price)
+                const start = promo.startDate.slice(0, -5)
+                const end = promo.endDate.slice(0, -5)
+                const now = new Date().toISOString().slice(0, -5)
 
-                order =  await this.orderService.create({...detail, productPrice: product.price, disc: promo.discount, total})
+                if (now > start && now < end) {
+                    total = detail.qty * ((1 - parseFloat(promo.discount)) * product.price)
+
+                    order =  await this.orderService.create({...detail, productPrice: product.price, disc: promo.discount, total})
+                } else {
+                    throw new NotFoundException('Promo cannot be used for today')
+                }
 
             } else {
                 throw new NotFoundException('Promo cannot be used for this product')
