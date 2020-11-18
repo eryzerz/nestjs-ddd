@@ -20,10 +20,6 @@ export const ORMConfig: PostgresConnectionOptions  = {
     username: 'user',
     password: 'password',
     database: 'pg_db',
-    migrations: ["migration/*.ts"],
-    cli: {
-        "migrationsDir": "migration"
-    },
     entities: [`${__dirname}/**/*.entity{.ts,.js}`],
     synchronize: true
 };

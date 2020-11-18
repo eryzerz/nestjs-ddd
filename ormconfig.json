@@ -5,7 +5,7 @@
     "username": "user",
     "password": "password",
     "database": "pg_db",
-    "migrations": ["migration/*.ts"],
+    "migrations": ["dist/migration/*.js"],
     "cli": {
         "migrationsDir": "migration"
     },
