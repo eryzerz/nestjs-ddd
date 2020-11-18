@@ -24,8 +24,14 @@ $ npm run start:dev
 ```
 
 ## Populate data
+
 ```bash
 $ npm run seed:run
+```
+or
+
+```bash
+$ npx typeorm migration:run
 ```
 
 ## Endpoints
